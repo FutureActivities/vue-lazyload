@@ -113,6 +113,10 @@ function getBestSelectionFromSrcset (el, scale) {
       break
     }
   }
+  
+  // Select largest if no results...
+  if (bestSelectedSrc == '')
+       bestSelectedSrc = result[result.length - 1][1];
 
   return bestSelectedSrc
 }
